@@ -44,6 +44,7 @@ public class J2MC_Hats extends JavaPlugin implements Listener {
                     p.sendMessage(ChatColor.RED + "Your hat has been removed");
                     p.getInventory().setHelmet(null);
                 }
+                J2MC_Manager.getPermissions().delFlag(p, 'H');
             }
         } catch (SQLException e) {
             getServer().getLogger().log(Level.SEVERE, "Error reading if player can has hat", e);
